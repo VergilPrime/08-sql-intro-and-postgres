@@ -174,7 +174,7 @@ function loadArticles() {
 
 function loadDB() {
   // COMMENTED: What number(s) of the full-stack-diagram.png image correspond to the following line of code? Which method of article.js is interacting with this particular piece of `server.js`? What part of CRUD is being enacted/managed by this particular piece of code?
-  // This is a query (3) which CREATES a table in our database and interacts with Article.prototype.insertRecord 
+  // This is a query (3) which CREATES a table in our database and interacts with Article.prototype.insertRecord
   client.query
     CREATE TABLE IF NOT EXISTS articles (
       article_id SERIAL PRIMARY KEY,
@@ -183,7 +183,7 @@ function loadDB() {
       "authorUrl" VARCHAR (255),
       category VARCHAR(20),
       "publishedOn" DATE,
-      body TEXT NOT NULL);`
+      body TEXT NOT NULL);
   )
     .then(() => {
       loadArticles();
